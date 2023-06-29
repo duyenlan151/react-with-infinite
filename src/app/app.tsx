@@ -38,7 +38,7 @@ const App = (): JSX.Element => {
         <InfiniteScroll
           loader={<p>loading...</p>}
           isLoading={isFetching}
-          className="mx-auto my-10"
+          className="my-10"
           fetchMore={fetchNextPage}
           hasMore={hasNextPage}
           endMessage={<p>You have seen it all</p>}
