@@ -11,7 +11,7 @@ React + TypeScript + Tailwind: Infinite Scrolling and Searchable Product List<br
 <p align='center'>
 
 <a href="https://vital.josepvidal.dev/">Copy template from Vital @ Vite Template: </a>
-<a href="https://infinite-scrolling-and-searchable-dl.netlify.app">Live Demo</a>
+<a href="https://react-with-inffinite-dl.vercel.app/">Live Demo</a>
 
 </p>
 
@@ -51,14 +51,14 @@ React + TypeScript + Tailwind: Infinite Scrolling and Searchable Product List<br
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/duyenlan151/my-app).
+[Create a repo from this template on GitHub](https://github.com/duyenlan151/react-with-inffinite).
 
 ### Getting Started
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-step 1: clone this repo: git clone https://github.com/duyenlan151/my-app
+step 1: clone this repo: git clone https://github.com/duyenlan151/react-with-inffinite
 #
 step 2: cd my-app
 #
@@ -89,9 +89,9 @@ yarn build
 
 And you will see the generated file in `dist` that ready to be served.
 
-### Deploy on Netlify
+### Deploy on Netlify or Vercel
 
-Go to [Netlify](https://app.netlify.com/start) and select your repository, `OK` along the way, and your App will be live in a minute.
+Go to [Netlify](https://app.netlify.com/start) or [Vercel](https://vercel.com/dashboard) and select your repository, `OK` along the way, and your App will be live in a minute.
 
 ### Issues
 
