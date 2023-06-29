@@ -5,6 +5,11 @@ export interface DataResponse<T> {
   total: number;
 }
 
+export interface DataError {
+  status: number;
+  message: string;
+}
+
 export interface ParamsRequest {
   search: string;
   skip: number;

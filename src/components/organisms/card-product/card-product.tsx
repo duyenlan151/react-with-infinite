@@ -1,31 +1,31 @@
 import { forwardRef, ComponentProps } from 'react';
 
 import styles from './card-product.module.css';
+import { getSymbolCurrency } from '@/utils';
+import { LazyImage } from '@/components/shared';
 
 export interface CardProductProps extends Omit<ComponentProps<'div'>, 'className' | 'children'> {
   title: string;
   description: string;
-  Icon: (props: ComponentProps<'svg'>) => JSX.Element;
+  Icon?: (props: ComponentProps<'svg'>) => JSX.Element;
   href: string;
+  price: number;
 }
 
 export const CardProduct = forwardRef<HTMLDivElement, CardProductProps>(
-  ({ title, description, Icon, href, ...rest }, ref) => {
+  ({ title, description, price, Icon, href, ...rest }, ref) => {
     return (
       <div ref={ref} className={styles.card} {...rest}>
-        <div>
-          <span className={styles.iconContainer}>
-            <Icon className={styles.icon} aria-hidden="true" />
-          </span>
-        </div>
+        <LazyImage
+          classImageWrapper={styles.imageWrapper}
+          classImage={styles.image}
+          src={href}
+          alt={title}
+        />
         <div className={styles.content}>
           <h3 className={styles.title}>{title}</h3>
+          <p className={styles.price}>{getSymbolCurrency(price)}</p>
           <p className={styles.description}>{description}</p>
-          <div className={styles.callToActionContainer}>
-            <a href={href} target="_blank" rel="noreferrer" className={styles.callToActionElement}>
-              Visit documentation →
-            </a>
-          </div>
         </div>
       </div>
     );
