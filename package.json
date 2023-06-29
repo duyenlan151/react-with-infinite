@@ -38,7 +38,7 @@
   "scripts": {
     "start": "vite --mode development",
     "build:stg": "tsc && vite build --mode staging --debug",
-    "build:production": "tsc && vite build --mode production --debug",
+    "build:production": "tsc && vite build --mode production",
     "test": "jest",
     "postinstall": "husky install"
   },
