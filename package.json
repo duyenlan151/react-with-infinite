@@ -36,7 +36,7 @@
     "yarn": ">=1.22.5"
   },
   "scripts": {
-    "start": "vite --mode development",
+    "start": "vite --mode development --host --port 3000",
     "build:stg": "tsc && vite build --mode staging --debug",
     "build:production": "tsc && vite build --mode production",
     "test": "jest",

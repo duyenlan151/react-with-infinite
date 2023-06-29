@@ -11,7 +11,7 @@ React + TypeScript + Tailwind: Infinite Scrolling and Searchable Product List<br
 <p align='center'>
 
 <a href="https://vital.josepvidal.dev/">Copy template from Vital @ Vite Template: </a>
-<a href="https://infinite-scrolling-and-searchable-dl.netlify.app">Live Demo</a>
+<a href="https://react-with-inffinite-dl.vercel.app/">Live Demo</a>
 
 </p>
 
@@ -25,6 +25,7 @@ React + TypeScript + Tailwind: Infinite Scrolling and Searchable Product List<br
 
 - ⚡️ [React 18](https://beta.reactjs.org/)
 - 🚀 [React Query](https://tanstack.com/query/v3/) - Caching - optimize query
+- 🚀 Lazy load image
 - 🦾 TypeScript
 - 🫀 [Jest](https://jestjs.io/) - unitary testing made easy
 - 🎨 [Tailwind with JIT](https://tailwindcss.com/) - next generation utility-first CSS
@@ -49,14 +50,14 @@ React + TypeScript + Tailwind: Infinite Scrolling and Searchable Product List<br
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/duyenlan151/my-app).
+[Create a repo from this template on GitHub](https://github.com/duyenlan151/react-with-inffinite).
 
 ### Getting Started
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-step 1: clone this repo: git clone https://github.com/duyenlan151/my-app
+step 1: clone this repo: git clone https://github.com/duyenlan151/react-with-inffinite
 #
 step 2: cd my-app
 #
