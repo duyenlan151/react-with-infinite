@@ -9,10 +9,10 @@ export interface MainLayoutProps {
 
 export function MainLayout({ children }: MainLayoutProps) {
   return (
-    <main className={styles.main}>
+    <>
       <Header />
-      {children}
+      <main>{children}</main>
       <Footer />
-    </main>
+    </>
   );
 }

@@ -3,7 +3,7 @@
 }
 
 .headerTitle {
-  @apply text-4xl lg:text-5xl !leading-[60px] font-extrabold lg:mb-8 sm:mb-10 text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-purple-800;
+  @apply text-4xl lg:text-5xl !leading-[60px] font-extrabold lg:mb-10 sm:mb-10 text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-purple-800;
 }
 
 .headerTopTitle {
