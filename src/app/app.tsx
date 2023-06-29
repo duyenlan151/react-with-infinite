@@ -1,21 +1,21 @@
-import Card from '@/components/organisms/card';
+import CopyButton from '@/components/molecules/copy-button';
 import {
+  Bars3Icon,
   BeakerIcon,
   BookmarkIcon,
   CakeIcon,
   ChevronDownIcon,
   CubeTransparentIcon,
   FilmIcon,
-  PhoneXMarkIcon,
   LockClosedIcon,
-  Bars3Icon,
   PencilIcon,
+  PhoneXMarkIcon,
   PhotoIcon,
 } from '@heroicons/react/24/outline';
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/solid';
-import CopyButton from '@/components/molecules/copy-button';
-
 import styles from './app.module.css';
+import { CardProduct } from '@/components/organisms/card-product';
+import { MainLayout } from '@/components/shared';
 
 const features = [
   {
@@ -95,29 +95,7 @@ const features = [
 
 const App = (): JSX.Element => {
   return (
-    <main className={styles.main}>
-      <header className={styles.header}>
-        <h3 className={styles.headerTopTitle}>
-          <span className={styles.headerTopTitleVital}>Vital</span> @ Vite Template
-        </h3>
-        <h1 className={styles.headerTitle}>React + TypeScript + Tailwind</h1>
-        <p className={styles.headerDescription}>
-          Bootstrap your web projects faster than ever. Comes with:{' '}
-          <code className={styles.headerDescriptionCode}>CSS-Modules</code>,{' '}
-          <code className={styles.headerDescriptionCode}>Jest</code>,{' '}
-          <code className={styles.headerDescriptionCode}>Husky</code>,{' '}
-          <code className={styles.headerDescriptionCode}>Commit-lint</code>,{' '}
-          <code className={styles.headerDescriptionCode}>ESLint</code>,{' '}
-          <code className={styles.headerDescriptionCode}>Prettier</code> and{' '}
-          <code className={styles.headerDescriptionCode}>Atomic organization for components</code>.
-          Configured and ready to go.
-        </p>
-      </header>
-      <section className={styles.copy}>
-        <div className={styles.copyInner}>
-          <CopyButton text="npx degit jvidalv/vital my-app" />
-        </div>
-      </section>
+    <MainLayout>
       <section className={styles.features}>
         {features.map((props, index) => (
           <div
@@ -125,7 +103,7 @@ const App = (): JSX.Element => {
             className={styles.cardWrapper}
             style={{ animationDelay: `${index * 0.1 + 0.1}s` }}
           >
-            <Card
+            <CardProduct
               title={props.name}
               description={props.description}
               Icon={props.logo}
@@ -134,10 +112,7 @@ const App = (): JSX.Element => {
           </div>
         ))}
       </section>
-      <footer className={styles.footer}>
-        <a href="https://github.com/jvidalv">Josep Vidal @ {new Date().getFullYear()}</a>
-      </footer>
-    </main>
+    </MainLayout>
   );
 };
 
