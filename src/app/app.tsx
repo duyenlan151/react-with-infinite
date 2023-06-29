@@ -15,7 +15,8 @@ import {
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/solid';
 import styles from './app.module.css';
 import { CardProduct } from '@/components/organisms/card-product';
-import { MainLayout } from '@/components/shared';
+import { MainLayout, SearchInput } from '@/components/shared';
+import { useLocation } from 'react-router-dom';
 
 const features = [
   {
@@ -94,9 +95,15 @@ const features = [
 ];
 
 const App = (): JSX.Element => {
+  const { search } = useLocation();
+  const querySearch = new URLSearchParams(search)?.get('search');
+
   return (
     <MainLayout>
       <section className={styles.features}>
+        <div className={styles.searchInput}>
+          <SearchInput defaultValue={String(querySearch)} />
+        </div>
         {features.map((props, index) => (
           <div
             key={index}
