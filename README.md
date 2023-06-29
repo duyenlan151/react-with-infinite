@@ -51,16 +51,16 @@ React + TypeScript + Tailwind: Infinite Scrolling and Searchable Product List<br
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/duyenlan151/react-with-inffinite).
+[Create a repo from this template on GitHub](https://github.com/duyenlan151/react-with-infinite).
 
 ### Getting Started
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-step 1: clone this repo: git clone https://github.com/duyenlan151/react-with-inffinite
+step 1: clone this repo: git clone https://github.com/duyenlan151/react-with-infinite
 #
-step 2: cd my-app
+step 2: cd react-with-infinite
 #
 step 3: npm install or yarn install #If you using yarn, If you don't have yarn installed, run: npm install -g yarn
 #
