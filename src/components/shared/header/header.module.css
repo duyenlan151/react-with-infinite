@@ -1,0 +1,23 @@
+.header {
+  @apply pt-16 z-10 px-2 relative max-w-screen-lg xl:max-w-screen-xl mx-auto text-center;
+}
+
+.headerTitle {
+  @apply text-4xl lg:text-5xl !leading-[60px] font-extrabold lg:mb-8 sm:mb-10 text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-purple-800;
+}
+
+.headerTopTitle {
+  @apply text-2xl sm:text-4xl leading-10 font-bold tracking-tight text-purple-400;
+}
+
+.headerTopTitleVital {
+  @apply text-[gold] opacity-75;
+}
+
+.headerDescription {
+  @apply max-w-screen-lg text-lg sm:text-2xl sm:leading-10 text-gray-300 font-medium mb-10 sm:mb-11;
+}
+
+.headerDescriptionCode {
+  @apply font-mono text-blue-500 font-bold;
+}
