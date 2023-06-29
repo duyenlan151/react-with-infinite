@@ -1,6 +1,6 @@
 import { DEFAULT_LIMIT, DEFAULT_SKIP } from '@/constants';
 import { ParamsProductRequest, Products } from '@/interfaces';
-import { formatQueryString, request } from '@/utils';
+import { request } from '@/utils';
 
 interface UrlParamsProps {
   [key: string]: string;

@@ -1,7 +1,6 @@
-import React, { ReactElement, ReactNode } from 'react';
-import styles from './layout.module.css';
-import { Header } from '../header';
+import { ReactElement, ReactNode } from 'react';
 import { Footer } from '../footer';
+import { Header } from '../header';
 
 export interface MainLayoutProps {
   children: ReactNode | ReactElement;
