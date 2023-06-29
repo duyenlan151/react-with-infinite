@@ -14,7 +14,7 @@ const App = (): JSX.Element => {
     search: String(querySearch || ''),
   });
 
-  const dataProducts: Products[] = useMemo(() => {
+  const dataProducts = useMemo(() => {
     if (data?.pages) {
       const newData = data?.pages?.reduce(
         (newArray: any, item: any) => [...newArray, ...item.products],
@@ -24,7 +24,7 @@ const App = (): JSX.Element => {
       return newData;
     }
     return [];
-  }, [data?.pages]) as [];
+  }, [data?.pages]) as Products[];
 
   return (
     <MainLayout>

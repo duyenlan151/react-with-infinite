@@ -1,5 +1,18 @@
 import { ILoadingPrimary } from '@/components/shared';
-import { useEffect, useRef } from 'react';
+import { ReactElement, ReactNode, useEffect, useRef } from 'react';
+
+export interface InfiniteScrollProps {
+  // Required
+  fetchMore(): void;
+  hasMore: boolean | undefined;
+  isLoading: boolean | undefined;
+
+  children?: ReactNode | ReactElement;
+  loader?: ReactNode | ReactElement;
+
+  className?: string;
+  endMessage?: ReactNode | ReactElement;
+}
 
 /**
  *
@@ -17,7 +30,7 @@ export const InfiniteScroll = ({
   endMessage,
   className,
   isLoading,
-}: any) => {
+}: InfiniteScrollProps) => {
   const pageEndRef = useRef(null);
   useEffect(() => {
     if (hasMore) {
