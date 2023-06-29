@@ -26,6 +26,7 @@ React + TypeScript + Tailwind: Infinite Scrolling and Searchable Product List<br
 - ⚡️ [React 18](https://beta.reactjs.org/)
 - 🚀 [React Query](https://tanstack.com/query/v3/) - Caching - optimize query
 - 🚀 Lazy load image
+- 🚀 Request with [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) (you can use [Axios](https://github.com/axios/axios/) if needed)
 - 🦾 TypeScript
 - 🫀 [Jest](https://jestjs.io/) - unitary testing made easy
 - 🎨 [Tailwind with JIT](https://tailwindcss.com/) - next generation utility-first CSS
