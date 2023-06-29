@@ -1,15 +1,15 @@
 import { forwardRef, ComponentProps } from 'react';
 
-import styles from './card.module.css';
+import styles from './card-product.module.css';
 
-export interface CardProps extends Omit<ComponentProps<'div'>, 'className' | 'children'> {
+export interface CardProductProps extends Omit<ComponentProps<'div'>, 'className' | 'children'> {
   title: string;
   description: string;
   Icon: (props: ComponentProps<'svg'>) => JSX.Element;
   href: string;
 }
 
-const Card = forwardRef<HTMLDivElement, CardProps>(
+export const CardProduct = forwardRef<HTMLDivElement, CardProductProps>(
   ({ title, description, Icon, href, ...rest }, ref) => {
     return (
       <div ref={ref} className={styles.card} {...rest}>
@@ -31,5 +31,3 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     );
   }
 );
-
-export default Card;
