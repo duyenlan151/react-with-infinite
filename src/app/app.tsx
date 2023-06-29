@@ -17,6 +17,7 @@ const App = (): JSX.Element => {
   const dataProducts: Products[] = useMemo(() => {
     if (data?.pages) {
       const newData = data?.pages?.reduce(
+        // for type any, for now I still not resolve it,
         (newArray: any, item: any) => [...newArray, ...item.products],
         []
       );
