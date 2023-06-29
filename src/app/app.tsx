@@ -14,7 +14,7 @@ const App = (): JSX.Element => {
     search: String(querySearch || ''),
   });
 
-  const dataProducts: Products[] = useMemo(() => {
+  const dataProducts = useMemo(() => {
     if (data?.pages) {
       const newData = data?.pages?.reduce(
         // for type any, for now I still not resolve it,
@@ -25,7 +25,7 @@ const App = (): JSX.Element => {
       return newData;
     }
     return [];
-  }, [data?.pages]) as [];
+  }, [data?.pages]) as Products[];
 
   return (
     <MainLayout>
