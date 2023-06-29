@@ -17,6 +17,9 @@ import styles from './app.module.css';
 import { CardProduct } from '@/components/organisms/card-product';
 import { MainLayout, SearchInput } from '@/components/shared';
 import { useLocation } from 'react-router-dom';
+import { useMemo } from 'react';
+import { useProducts } from '@/hooks';
+import { Products } from '@/interfaces';
 
 const features = [
   {
@@ -98,26 +101,40 @@ const App = (): JSX.Element => {
   const { search } = useLocation();
   const querySearch = new URLSearchParams(search)?.get('search');
 
+  const { data, isFetching, fetchNextPage, hasNextPage } = useProducts({
+    search: String(querySearch || ''),
+  });
+
+  const dataProducts: Products[] = useMemo(() => {
+    if (data?.pages) {
+      const newData = data?.pages?.reduce(
+        (newArray: any, item: any) => [...newArray, ...item.products],
+        []
+      );
+
+      return newData;
+    }
+    return [];
+  }, [data?.pages]) as [];
+
   return (
     <MainLayout>
       <section className={styles.features}>
         <div className={styles.searchInput}>
           <SearchInput defaultValue={String(querySearch)} />
         </div>
-        {features.map((props, index) => (
-          <div
-            key={index}
-            className={styles.cardWrapper}
-            style={{ animationDelay: `${index * 0.1 + 0.1}s` }}
-          >
-            <CardProduct
-              title={props.name}
-              description={props.description}
-              Icon={props.logo}
-              href={props.docs}
-            />
-          </div>
-        ))}
+        <div>
+          {dataProducts?.map((product: Products, _) => (
+            <div key={`${product.id} - ${_}`} className={styles.cardWrapper}>
+              <CardProduct
+                title={product?.title}
+                price={product?.price}
+                description={product?.description}
+                href={product?.thumbnail}
+              />
+            </div>
+          ))}
+        </div>
       </section>
     </MainLayout>
   );

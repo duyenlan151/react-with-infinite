@@ -22,7 +22,7 @@ export function SearchInput({ defaultValue }: SearchInputProps) {
   }, [debouncedSearchText]);
 
   return (
-    <div>
+    <>
       <InputField
         value={searchText}
         name="search"
@@ -30,6 +30,6 @@ export function SearchInput({ defaultValue }: SearchInputProps) {
         onChange={({ target: { value } }: ChangeEvent<HTMLInputElement>) => setSearchText(value)}
         onClear={() => setSearchText('')}
       />
-    </div>
+    </>
   );
 }
