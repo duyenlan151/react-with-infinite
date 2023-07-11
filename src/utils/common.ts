@@ -27,5 +27,5 @@ export const getSymbolCurrency = (value: number | string, currencyCode: Currency
  * @param params: query string => { search: 'search', limit: 2, category: 'Phone' }
  * @returns queryString with value of key !== null
  */
-export const formatQueryString = (params: Object) =>
+export const formatQueryString = (params: object) =>
   Object.fromEntries(Object.entries(params).filter(([_, v]) => v != null && v !== ''));

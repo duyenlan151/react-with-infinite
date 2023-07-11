@@ -23,7 +23,7 @@ export const CardProduct = forwardRef<HTMLDivElement, CardProductProps>(
           alt={title}
         />
         <div className={styles.content}>
-          <h3 className={styles.title}>{title}</h3>
+          <h5 className={styles.title}>{title}</h5>
           <p className={styles.price}>{getSymbolCurrency(price)}</p>
           <p className={styles.description}>{description}</p>
         </div>

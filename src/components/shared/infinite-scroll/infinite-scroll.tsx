@@ -54,11 +54,13 @@ export const InfiniteScroll = ({
     }
   }, [hasMore]);
   return (
-    <div className={className}>
-      {children}
+    <>
+      <div className={className}>
+        {children}
 
+        {hasMore ? <div ref={pageEndRef}>{loader}</div> : endMessage}
+      </div>
       {isLoading && <ILoadingPrimary />}
-      {hasMore ? <div ref={pageEndRef}>{loader}</div> : endMessage}
-    </div>
+    </>
   );
 };

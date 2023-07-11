@@ -2,9 +2,17 @@
   @apply mb-4;
 }
 
+/* .searchInput {
+  @apply w-7/12 max-w-screen-sm mx-auto mb-4;
+} */
+
 .features {
   @apply max-w-screen-sm mx-auto grid grid-cols-1 gap-4 ;
 }
+
+/* .features {
+  @apply max-w-screen-lg mx-auto grid grid-cols-1 gap-4 ;
+} */
 
 .cardWrapper {
   @apply col-span-12 sm:col-span-5 opacity-0;

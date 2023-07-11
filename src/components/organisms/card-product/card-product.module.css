@@ -2,9 +2,17 @@
   @apply bg-white bg-opacity-10 mb-6 rounded-md shadow p-4 relative overflow-hidden h-full flex items-start min-h-[150px];
 }
 
+/* .card {
+  @apply bg-white bg-opacity-10 rounded-md shadow p-4 relative overflow-hidden h-full;
+} */
+
 .imageWrapper{
   @apply relative flex items-center justify-center lg:min-w-[30%] min-w-[40%] lg:max-w-[30%] max-w-[40%] min-h-[150px] max-h-[150px];
 }
+
+/* .imageWrapper{
+  @apply relative flex items-center justify-center lg:min-h-[180px] min-h-[220px];
+} */
 
 .image {
   @apply absolute h-full w-full object-cover;
@@ -14,8 +22,12 @@
   @apply flex flex-col h-full ml-4;
 }
 
+/* .content {
+  @apply mt-3;
+} */
+
 .title {
-  @apply text-2xl font-bold text-black text-blue-500 ;
+  @apply text-xl font-bold text-black text-blue-500 ;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -27,7 +39,7 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 2;
 }
 
 .price {

@@ -5,6 +5,7 @@ import { Products } from '@/interfaces';
 import { useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from './app.module.css';
+import { CardProducSkeleton } from '@/components/organisms/card-product/card-product-skeleton';
 
 const App = (): JSX.Element => {
   const { search } = useLocation();
@@ -33,18 +34,19 @@ const App = (): JSX.Element => {
           <SearchInput defaultValue={String(querySearch)} />
         </div>
         {!isFetching && dataProducts?.length <= 0 && (
-          <div className="text-gray-400">No data found</div>
+          <div className="text-gray-400 text-center">No data found</div>
         )}
         <InfiniteScroll
           loader={<p>loading...</p>}
           isLoading={isFetching}
+          // className={styles.productList}
           className="my-10"
           fetchMore={fetchNextPage}
           hasMore={hasNextPage}
           endMessage={<p>You have seen it all</p>}
         >
           {dataProducts?.map((product: Products, _) => (
-            <div key={`${product.id} - ${_}`} className={styles.cardWrapper}>
+            <div key={`${product.id} - ${_}`}>
               <CardProduct
                 title={product?.title}
                 price={product?.price}

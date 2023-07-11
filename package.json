@@ -40,7 +40,8 @@
     "build:stg": "tsc && vite build --mode staging --debug",
     "build:production": "tsc && vite build --mode production",
     "test": "jest",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "lint": "eslint --max-warnings=0 src"
   },
   "dependencies": {
     "@heroicons/react": "2.0.13",
